@@ -76,5 +76,5 @@ class TestTablaEnteros {
 	void testPosicionTablaNull() {
 		assertThrows(NoSuchElementException.class,() -> tabla.posicionTabla(200));
 	}
-
+//
 }
