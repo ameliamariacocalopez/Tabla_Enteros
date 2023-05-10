@@ -52,6 +52,29 @@ class TestTablaEnteros {
 		int suma = 10;
 		assertEquals(suma, tabla.sumaTabla());
 	}
+	@Test
+	void testMayorTabla1() {
+		int max = -999;
+		Integer [] arrayNums2 = new Integer[3];
+		arrayNums2[0] = -2000;
+		arrayNums2[1] = -3000;
+		arrayNums2[2] = -4000;
+		
+		TablaEnteros tabla2 = new TablaEnteros(arrayNums2);
+		assertEquals(max, tabla2.mayorTabla());
+	}
+	@Test
+	void testMayorTabla2() {
+		assertEquals(40, tabla.mayorTabla());
+	}
 
-
+	@Test
+	void testPosicionTabla1() {
+		assertEquals(3, tabla.posicionTabla(40));
+	}
+	@Test
+	void testPosicionTablaNull() {
+		assertThrows(NoSuchElementException.class,() -> tabla.posicionTabla(200));
+	}
+//
 }
